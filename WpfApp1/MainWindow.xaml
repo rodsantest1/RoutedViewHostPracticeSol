@@ -2,8 +2,17 @@
                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                 xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+                xmlns:rx="http://reactiveui.net"
                 Title="MainWindow" Height="350" Width="525">
-        <Grid>
-                
-        </Grid>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Previous" />
+            <Button Content="Next" />
+        </StackPanel>
+        
+        <rx:RoutedViewHost
+            Router="{Binding Router}"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch" />
+    </StackPanel>
 </Window>
